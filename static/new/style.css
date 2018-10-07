@@ -1,0 +1,78 @@
+body {
+    background-color: #F7F8EC;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial;
+
+}
+
+.header{
+    font-size: 2vw;
+    text-align: center;
+    height: fit-content;
+    line-height: 80%;
+
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #353719;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 13px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #C2533D;
+}
+
+.active {
+    background-color: #3B5A7D;
+}
+
+
+.findItem {
+    margin-top: 10px;
+    background-color: #54B948;
+    font-size: 2em;
+    height: 30vh;
+    width: 25%;
+    padding: 5px;
+}
+
+.error {
+    font-size: 12px;
+}
+.active1{
+    font-size: 17px;
+}
+.price{
+    font-size: 17px;
+}
+
+.input12 {
+    height: inherit;
+    width: 15vw;
+}
+
+.ar {
+    background: green;
+    height: auto;
+    width: auto;
+}

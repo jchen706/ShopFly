@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>No Nome</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'new/style.css' %}">
+</head>
+<body>
+<div class="container">
+<div class = "header">
+  <h1>Fries</h1>
+</div>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="{% url 'order' %}">Order</a></li>
+  <li><a href="{% url 'card' %}">Make A Payment</a></li>
+</ul>
+
+<div class="findItem">
+    <form method="post">
+        {% csrf_token %}
+        <label for="the_id"><i>Search by Item Id</i> </label>
+        <input id ="the_id" type="text" name="the_id" value="{{ current_id }}" class="input12">
+        <input type="submit" value="Search" class="button1">
+    </form>
+    {% if error_message %}<p class="error"><strong><i>{{ error_message }}</i></strong></p>{% endif %}
+    <h2 class="price">Item Price: </h2> {% if price %}<h1 class="price">{{ price }}</h1>{% endif %}
+    <h2 class="price">Item Status:</h2> {% if active %}<h1 class="price">{{ active }}</h1>{% endif %}
+
+    <button class="btton1"><a href="{% url 'order' %}">Order!</button>
+
+</div>
+
+<div class = "ar">
+
+
+
+</div>
+
+</div>
+
+</body>
+
+
+
+</html>

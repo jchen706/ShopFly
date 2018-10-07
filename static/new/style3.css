@@ -1,0 +1,75 @@
+body {
+    background-color: #F7F8EC;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial;
+
+}
+label {
+    padding-top: 25px;
+}
+.formers {
+    grid-column: 1/2;
+    align: center;
+    height: 65%;
+    width: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr
+    grid-border: 2px;
+    line-height: 60%;
+    float: left;
+}
+
+.button3 {
+    margin-top: 5px;
+    height: 5vh;
+    width: 5vw;
+    color: white;
+    font-color: white;
+    background-color: green;
+    font-size: 1vw;
+}
+
+.header {
+    font-size: 3.5vw;
+    text-align: center;
+    height: fit-content;
+}
+
+.input1 {
+    height 15px;
+    width: 30vw;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.input2 {
+    height 15px;
+    width: 30vw;
+    padding: 5px;
+    font-size: 12px;
+
+}
+
+.input3 {
+    height 15px;
+    width: 30vw;
+    padding: 5px;
+    font-size: 12px;
+}
+
+
+.input4 {
+    height 15px;
+    width: 30vw;
+    padding: 5px;
+    font-size: 12px;
+
+}
+
+.second{
+    text-align: center;
+}

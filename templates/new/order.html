@@ -1,0 +1,41 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'new/style2.css' %}">
+{% block content %}
+
+  <h1 class="header"><strong>Your Order</strong></h1>
+  <div class="order1">
+      <form method="post" class="formers">
+          {% csrf_token %}
+          <label for="customer_name"><i>Your Name</i> </label>
+          <input id ="customer_name" type="text" name="customer_name" value="{{ customer_name }}" class="input1">
+
+          <label for="productNum"><i>Product Id</i> </label>
+          <input id ="productNum" type="text" name="productNum" value="{{ current_id }}" class="input2">
+
+          {% if error_message %}<p class="error"><strong><i>{{ error_message }}</i></strong></p>{% endif %}
+
+          <label for="pickupLoc"><i>Your Pick Up Location</i> </label>
+          <input id ="pickupLoc" type="text" name="pickupLoc" value="{{ current_pickupLoc }}" class="input3">
+
+          <label for="quantity"><i>Quanitity of Purchase</i> </label>
+          <input id ="quantity" type="text" name="quantity" value="{{ current_quantity }}" class="input4">
+
+          <input type="submit" value="Order" class="button1" >
+
+      </form>
+
+
+
+
+
+  </div>
+  <div class="second">
+       <h2 class="price"> Total Price: </h2> {% if price %}<h1 class="price">{{ price }}</h1>{% endif %}
+
+      <button class="button1"><a href="{% url 'card' %}">Pay</button>
+
+
+      <button class="button1"><a href="{% url 'index' %}">Go Back</button>
+    </div>
+
+{% endblock %}

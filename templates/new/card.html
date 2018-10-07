@@ -1,0 +1,33 @@
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'new/style3.css' %}">
+</head>
+<body>
+    <div class="container">
+    <h1 class="header">Card Payment</h1>
+    <form method="post" class="formers">
+        {% csrf_token %}
+        <label for="creditCard_num"><i>Credit Card Number</i> </label>
+        <input id ="creditCard_num" type="text" name="creditCard_num" value="{{ creditCard_num}}" class="input1">
+
+        <label for="expirationDate"><i>Expiration Date</i> </label>
+        <input id ="expirationDate" type="text" name="expirationDate" value="{{ current_expire }}" class="input2">
+
+        {% if error_message %}<p class="error"><strong><i>{{ error_message }}</i></strong></p>{% endif %}
+
+        <label for="amount"><i>Amount</i> </label>
+        <input id ="amount" type="text" name="amount" value="{{ current_amount}}" class="input3">
+
+        <label for="name"><i>Name</i> </label>
+        <input id ="name" type="text" name="name" value="{{ current_name }}" class="input4">
+
+        <input type="submit" value="Pay" class="button3" href = "{{ index }}">
+
+    </form>
+
+    {% if message %}<h3 class="message">{{message}}<h3>{% endif %}
+
+    <button class="button3"><a href="{% url 'order' %}">Go Back</button>
+    </div>
+{% endblock %}

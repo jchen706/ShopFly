@@ -1,3 +1,6 @@
 # Shopfly
 
-to test must use django
+Utilizes Django Framework
+
+To Test: Put all these files into 
+
